@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Product Name] - Clothing Store</title>
+    <link rel="stylesheet" href="styleallpages.css">
+</head>
+<body>
+
+    <header>
+        <h1>[Product Name]</h1>
+        <nav>
+            <a href="./Homepage.html">Home</a>
+            <a href="./Productspage.html">Products</a>
+            <a href="./Aboutpage.html">About</a>
+            <a href="./Contactpage.html">Contact</a>
+            <a href="./Cartpage.html">Cart</a>
+        </nav>
+    </header>
+
+    <section class="product-details">
+        <img src="../Product images/Shirt1.png" alt="[Product Name]" class="product-image">
+        <h2>[Product Name]</h2>
+        <p>Color: [Product Color]</p>
+        <p>Price: $[Product Price]</p>
+        <label for="size">Size:</label>
+        <select id="size" name="size">
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+        </select>
+        <button onclick="addToCart()">Add to Cart</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Clothing Store. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="styleallpages.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .cart-item {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        #checkout-section {
+            margin-top: 30px;
+        }
+        #checkout-section h2 {
+            margin-bottom: 10px;
+        }
+        .section-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+        #confirm-order {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        #confirm-order:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Your Cart</h1>
+            <a href="./Homepage.html">Home</a>
+            <a href="./Productspage.html">Products</a>
+            <a href="./Aboutpage.html">About</a>
+            <a href="./Contactpage.html">Contact</a>
+            <a href="../pages/Cartpage.html" id="cart-link">
+                <div id="cart-icon-wrapper" style="position: relative; display: inline-block;">
+                    <img src="../Cart logo/trolley.png" alt="Cart" id="cart-icon" style="width: 32px; height: 32px;">
+                    <span id="cart-counter" style="background-color: red; color: white; border-radius: 50%; padding: 2px 6px; display: none; position: absolute; top: 0; right: 0; font-size: 12px; font-weight: bold;">0</span>
+                </div>
+            </a>
+        </nav>
+    </header>
+    <div id="cart-items"></div>
+    <button onclick="clearCart()" style="margin-top: 20px;">Clear Cart</button>
+
+    <!-- Checkout Section -->
+    <div id="checkout-section">
+        <h2>Checkout</h2>
+
+        <!-- Payment Section -->
+        <div id="payment-section" class="section-group">
+            <h3>Payment Options</h3>
+            <label>
+                <input type="radio" name="payment" value="card" checked> Debit/Credit Card
+            </label>
+            <label>
+                <input type="radio" name="payment" value="paypal"> PayPal
+            </label>
+            <label>
+                <input type="radio" name="payment" value="applepay"> Apple Pay
+            </label>
+            <label>
+                <input type="radio" name="payment" value="cash"> Payment at Delivery
+            </label>
+        </div>
+
+        <!-- Delivery Section -->
+        <div id="delivery-section" class="section-group">
+            <h3>Delivery Options</h3>
+            <label>
+                <input type="radio" name="delivery" value="speedy" checked> Speedy
+            </label>
+            <label>
+                <input type="radio" name="delivery" value="ekont"> Ekont
+            </label>
+        </div>
+
+        <button id="confirm-order">Confirm Order</button>
+    </div>
+
+    <script src="../Js/Cart.js"></script>
+    <footer>
+        <section class="footer-links">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./Homepage.html">Home</a></li>
+                    <li><a href="./Productspage.html">Products</a></li>
+                    <li><a href="./Aboutpage.html">About</a></li>
+                    <li><a href="./Contactpage.html">Contact</a></li>
+                    <li><a href="./Cartpage.html">Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: support@wearrior.com</p>
+                <p>Phone: +359 89 579 8252</p>
+                <p>Address: American college, Mladost, Aleksandar Malinov Boulevard 78, eт. 1, 1799 Sofia</p>
+            </div>
+        </section>
+        <p>&copy; 2024 Clothing Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>
