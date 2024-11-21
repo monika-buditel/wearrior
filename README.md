@@ -1,2 +1,0 @@
-# wearrior
-Online clothes shop

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Clothing Store</title>
+    <link rel="stylesheet" href="styleallpages.css">
+</head>
+<body>
+
+    <header>
+        <h1>Our Products</h1>
+        <nav>
+            <a href="./Homepage.html">Home</a>
+            <a href="./Productspage.html">Products</a>
+            <a href="./Aboutpage.html">About</a>
+            <a href="./Contactpage.html">Contact</a>
+            <a href="../pages/Cartpage.html" id="cart-link">
+                <div id="cart-icon-wrapper" style="position: relative; display: inline-block;">
+                    <img src="../Cart logo/trolley.png" alt="Cart" id="cart-icon" style="width: 32px; height: 32px;">
+                    <span id="cart-counter" style="background-color: red; color: white; border-radius: 50%; padding: 2px 6px; display: none; position: absolute; top: 0; right: 0; font-size: 12px; font-weight: bold;">0</span>
+                </div>
+            </a>
+            
+        </nav>
+    </header>
+
+    <!-- Filter Section -->
+    <aside class="filters">
+        <h2>Filter Products</h2>
+        <label for="size">Size:</label>
+        <select id="size" onchange="applyFilters()">
+            <option value="all">All</option>
+            <option value="S">Small</option>
+            <option value="M">Medium</option>
+            <option value="L">Large</option>
+        </select>
+
+        <label for="color">Color:</label>
+        <select id="color" onchange="applyFilters()">
+            <option value="all">All</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="black">Black</option>
+        </select>
+
+        <label for="price">Price:</label>
+        <input type="range" id="price" min="0" max="100" step="10" value="100" oninput="applyFilters()">
+        <span id="price-display">$100</span>
+    </aside>
+
+    <!-- Product Listing -->
+    <section class="products" id="product-list">
+        <div class="product" data-id="1" data-size="M" data-color="red" data-price="50">
+            <img src="../Product images/Shirt1.png" alt="Product 1">
+            <h2>Nike clear T-Shirt</h2>
+            <p>Color: White</p>
+            <p>Price: $50</p>
+            <label for="size1">Size:</label>
+            <select id="size1" name="size1">
+                <option value="S">Small</option>
+                <option value="M" selected>Medium</option>
+                <option value="L">Large</option>
+            </select>
+            <button onclick="addToCart(1)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="2" data-size="L" data-color="blue" data-price="75">
+            <img src="../Product images/Shirt2.png" alt="Product 2">
+            <h2>Nike T-Shirt Black logo</h2>
+            <p>Color: White</p>
+            <p>Price: $75</p>
+            <label for="size2">Size:</label>
+            <select id="size2" name="size2">
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L" selected>Large</option>
+            </select>
+            <button onclick="addToCart(2)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="3" data-size="S" data-color="black" data-price="40">
+            <img src="../Product images/shirt3.jfif" alt="Product 3">
+            <h2>Adidas T-Shirt Green</h2>
+            <p>Color: Black</p>
+            <p>Price: $40</p>
+            <label for="size3">Size:</label>
+            <select id="size3" name="size3">
+                <option value="S" selected>Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+            </select>
+            <button onclick="addToCart(3)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="4" data-size="M" data-color="red" data-price="55">
+            <img src="../Product images/shirt4.jpg" alt="Product 4">
+            <h2>The North Face T-Shirt</h2>
+            <p>Color: Red</p>
+            <p>Price: $55</p>
+            <label for="size4">Size:</label>
+            <select id="size4" name="size4">
+                <option value="S">Small</option>
+                <option value="M" selected>Medium</option>
+                <option value="L">Large</option>
+            </select>
+            <button onclick="addToCart(4)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="5" data-size="L" data-color="blue" data-price="60">
+            <img src="../Product images/Shirt5.png" alt="Product 5">
+            <h2>Under Armour Black</h2>
+            <p>Color: Blue</p>
+            <p>Price: $60</p>
+            <label for="size5">Size:</label>
+            <select id="size5" name="size5">
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L" selected>Large</option>
+            </select>
+            <button onclick="addToCart(5)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="6" data-size="S" data-color="black" data-price="45">
+            <img src="../Product images/Shirt6.png" alt="Product 6">
+            <h2>Boss T-Shirt White</h2>
+            <p>Color: Black</p>
+            <p>Price: $45</p>
+            <label for="size6">Size:</label>
+            <select id="size6" name="size6">
+                <option value="S" selected>Small</option>
+                <option value="M">Medium</option>
+                   <option value="L">Large</option>
+            </select>
+            <button onclick="addToCart(6)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="7" data-size="M" data-color="red" data-price="65">
+            <img src="../Product images/Shirt7.png" alt="Product 7">
+            <h2>Armani Exchange T-Shirt</h2>
+            <p>Color: Red</p>
+            <p>Price: $65</p>
+            <label for="size7">Size:</label>
+            <select id="size7" name="size7">
+                <option value="S">Small</option>
+                <option value="M" selected>Medium</option>
+                <option value="L">Large</option>
+            </select>
+            <button onclick="addToCart(7)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="8" data-size="L" data-color="blue" data-price="80">
+            <img src="../Product images/Shirt8.png" alt="Product 8">
+            <h2>Guess T-SHirt</h2>
+            <p>Color: Blue</p>
+            <p>Price: $80</p>
+            <label for="size8">Size:</label>
+            <select id="size8" name="size8">
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L" selected>Large</option>
+            </select>
+            <button onclick="addToCart(8)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="9" data-size="S" data-color="red" data-price="30">
+            <img src="../Product images/Shirt9.png" alt="Product 9">
+            <h2>Boss T-Shirt</h2>
+            <p>Color: Red</p>
+            <p>Price: $30</p>
+            <label for="size9">Size:</label>
+            <select id="size9" name="size9">
+                <option value="S" selected>Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+            </select>
+            <button onclick="addToCart(9)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="10" data-size="M" data-color="black" data-price="70">
+            <img src="../Product images/guess_white.png" alt="Product 10">
+            <h2>Guess White</h2>
+            <p>Color: Black</p>
+            <p>Price: $70</p>
+            <label for="size10">Size:</label>
+            <select id="size10" name="size10">
+                <option value="S">Small</option>
+                <option value="M" selected>Medium</option>
+                <option value="L">Large</option>
+            </select>
+            <button onclick="addToCart(10)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="11" data-size="L" data-color="blue" data-price="90">
+            <img src="../Product images/armani_black.png" alt="Product 11">
+            <h2>Armani Black</h2>
+            <p>Color: Blue</p>
+            <p>Price: $90</p>
+            <label for="size11">Size:</label>
+            <select id="size11" name="size11">
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L" selected>Large</option>
+            </select>
+            <button onclick="addToCart(11)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="12" data-size="S" data-color="red" data-price="50">
+            <img src="../Product images/Shirt12.png" alt="Product 12">
+            <h2>Guess briedge</h2>
+            <p>Color: Red</p>
+            <p>Price: $50</p>
+            <label for="size12">Size:</label>
+            <select id="size12" name="size12">
+                <option value="S" selected>Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+            </select>
+            <button onclick="addToCart(12)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="13" data-size="M" data-color="blue" data-price="85">
+            <img src="../Product images/Shirt13.png" alt="Product 13">
+            <h2>Under Armour green</h2>
+            <p>Color: Blue</p>
+            <p>Price: $85</p>
+            <label for="size13">Size:</label>
+            <select id="size13" name="size13">
+                <option value="S">Small</option>
+                <option value="M" selected>Medium</option>
+                <option value="L">Large</option>
+            </select>
+            <button onclick="addToCart(13)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="14" data-size="L" data-color="black" data-price="95">
+            <img src="../Product images/Shirt14.png" alt="Product 14">
+            <h2>Nike black</h2>
+            <p>Color: Black</p>
+            <p>Price: $95</p>
+            <label for="size14">Size:</label>
+            <select id="size14" name="size14">
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L" selected>Large</option>
+            </select>
+            <button onclick="addToCart(14)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="15" data-size="S" data-color="red" data-price="50">
+            <img src="../Product images/Shirt15.png" alt="Product 15">
+            <h2>Calvin Klein black</h2>
+            <p>Color: Red</p>
+            <p>Price: $50</p>
+            <label for="size15">Size:</label>
+            <select id="size15" name="size15">
+                <option value="S" selected>Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+            </select>
+            <button onclick="addToCart(15)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="16" data-size="M" data-color="blue" data-price="110">
+            <img src="../Product images/Shirt16.png" alt="Product 16">
+            <h2>Hugo Black</h2>
+            <p>Color: Blue</p>
+            <p>Price: $110</p>
+            <label for="size16">Size:</label>
+            <select id="size16" name="size16">
+                <option value="S">Small</option>
+                <option value="M" selected>Medium</option>
+                <option value="L">Large</option>
+            </select>
+            <button onclick="addToCart(16)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="17" data-size="L" data-color="black" data-price="120">
+            <img src="../Product images/Shirt17.png" alt="Product 17">
+            <h2>Boss Green</h2>
+            <p>Color: Black</p>
+            <p>Price: $120</p>
+            <label for="size17">Size:</label>
+            <select id="size17" name="size17">
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L" selected>Large</option>
+            </select>
+            <button onclick="addToCart(17)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="18" data-size="S" data-color="red" data-price="130">
+            <img src="../Product images/Shirt18.png" alt="Product 18">
+            <h2>Calvin Klein Grey</h2>
+            <p>Color: Red</p>
+            <p>Price: $130</p>
+            <label for="size18">Size:</label>
+            <select id="size18" name="size18">
+                <option value="S" selected>Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+            </select>
+            <button onclick="addToCart(18)">Add to Cart</button>
+        </div>
+    </section>
+
+    <script src="../Js/Script.js"></script>
+    <script src="../Js/Cart.js"></script>
+
+    <footer>
+        <section class="footer-links">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./Homepage.html">Home</a></li>
+                    <li><a href="./Productspage.html">Products</a></li>
+                    <li><a href="./Aboutpage.html">About</a></li>
+                    <li><a href="./Contactpage.html">Contact</a></li>
+                    <li><a href="./Cartpage.html">Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: support@wearrior.com</p>
+                <p>Phone: +359 89 579 8252</p>
+                <p>Address: American collegeMladost, Aleksandar Malinov Boulevard 78, eт. 1, 1799 Sofia</p>
+            </div>
+        </section>
+        <p>&copy; 2024 Clothing Store. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>

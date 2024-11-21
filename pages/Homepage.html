@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Clothing Store</title>
+    <link rel="stylesheet" href="styleallpages.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Clothing Store</h1>
+        <nav>
+            <a href="./Homepage.html">Home</a>
+            <a href="./Productspage.html">Products</a>
+            <a href="./Aboutpage.html">About</a>
+            <a href="./Contactpage.html">Contact</a>
+            <a href="./Cartpage.html">Cart</a>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <h2>Discover the Latest Trends</h2>
+    </section>
+
+    <!-- Full-Screen Video Section -->
+    <section class="promo-video">
+        <video autoplay muted loop playsinline>
+            <source src="../Product images/MANGO Committed  Making FASHION more SUSTAINABLE.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-row">
+            <div class="product">
+                <img src="../Product images/Shirt1.png" alt="Product 1">
+                <div class="product-overlay">
+                    <label for="size1">Size:</label>
+                    <select id="size1">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
+                    <button onclick="addToCart(1)">Add to Cart</button>
+                </div>
+                <h3>Product 1</h3>
+            </div>
+            <div class="product">
+                <img src="../Product images/Shirt2.png" alt="Product 2">
+                <div class="product-overlay">
+                    <label for="size2">Size:</label>
+                    <select id="size2">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
+                    <button onclick="addToCart(2)">Add to Cart</button>
+                </div>
+                <h3>Product 2</h3>
+            </div>
+            <div class="product">
+                <img src="../Product images/shirt3.jfif" alt="Product 3">
+                <div class="product-overlay">
+                    <label for="size3">Size:</label>
+                    <select id="size3">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
+                    <button onclick="addToCart(3)">Add to Cart</button>
+                </div>
+                <h3>Product 3</h3>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <section class="footer-links">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./Homepage.html">Home</a></li>
+                    <li><a href="./Productspage.html">Products</a></li>
+                    <li><a href="./Aboutpage.html">About</a></li>
+                    <li><a href="./Contactpage.html">Contact</a></li>
+                    <a href="../pages/Cartpage.html" id="cart-link">
+                        <div id="cart-icon-wrapper" style="position: relative; display: inline-block;">
+                            <img src="../Cart logo/trolley.png" alt="Cart" id="cart-icon" style="width: 32px; height: 32px;">
+                            <span id="cart-counter" style="background-color: red; color: white; border-radius: 50%; padding: 2px 6px; display: none; position: absolute; top: 0; right: 0; font-size: 12px; font-weight: bold;">0</span>
+                        </div>
+                    </a>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: support@wearrior.com</p>
+                <p>Phone: +359 89 579 8252</p>
+                <p>Address: American collegeMladost, Aleksandar Malinov Boulevard 78, eт. 1, 1799 Sofia</p>
+            </div>
+        </section>
+        <p>&copy; 2024 Clothing Store. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
